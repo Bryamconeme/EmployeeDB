@@ -1,139 +1,122 @@
-Requerimientos
+REQUERIMIENTOS.md
 
-Descripción del cliente y problema principal:
-La empresa ficticia Technoblade enfrenta actualmente una serie de deficiencias relacionadas con la gestión de su personal, principalmente debido a la ausencia de un sistema centralizado que permita llevar un control adecuado sobre sus empleados y los recursos asignados a estos. Esta falta de organización ha generado diversas complicaciones operativas, como la imposibilidad de contar con un inventario actualizado de trabajadores, lo que dificulta la identificación clara del personal activo, sus roles, los dispositivos o equipos que se les han asignado, así como los horarios en los que desempeñan sus funciones.
+1. Descripción del cliente y problema principal
 
-Uno de los principales problemas radica en la baja seguridad en el control de accesos, ya que, al no disponer de un registro confiable de entradas y salidas del personal, la empresa no puede garantizar que únicamente los empleados autorizados tengan acceso a áreas sensibles o información empresarial confidencial. Esta situación representa un riesgo importante tanto para la seguridad de los datos internos como para la operatividad general de la organización.
+Las comunidades coleccionadoras de cartas abarcan un gran espacio en el mercado (Pokémon, Mitos y Leyendas, Yu-Gi-Oh, etc.). El desafío actual es la falta de una plataforma centralizada y segura que valide las transacciones y la autenticidad de las cartas.
 
-Además, la falta de un sistema que permita gestionar los permisos de edición y eliminación de información genera vulnerabilidades en la integridad de los datos. Actualmente no existe una forma de verificar quién modifica o elimina información dentro de los registros, lo que podría dar lugar a errores o manipulaciones no autorizadas.
+Nuestra idea reúne a todo coleccionista, ya sea por hobby o comercio, en un sistema especializado. La plataforma permitirá a los usuarios crear un perfil y, según su rol, podrán:
+Publicar cartas duplicadas o en venta.
+Intercambiar cartas para completar colecciones.
+Participar en subastas o trueques supervisados.
+El objetivo es crear un mercado seguro que mejore la situación económica de los vendedores y complete los espacios vacíos en las colecciones de los clientes.
 
-Por otro lado, Technoblade carece de una herramienta eficaz para el registro de horas laborales, lo que impide una correcta gestión del tiempo trabajado por cada empleado y, en consecuencia, dificulta la elaboración precisa de las nóminas y el cálculo de salarios. Esta ausencia de control impacta directamente en la eficiencia administrativa y en la transparencia hacia los trabajadores.
+2. Lista de usuarios del sistema
 
-En vista de esta problemática, se propone el desarrollo de un sistema de gestión basado en MongoDB que permita almacenar y organizar de manera eficiente la información de los empleados, controlar el acceso a los recursos y datos según el rol de cada usuario, registrar las jornadas laborales y, en general, optimizar los procesos relacionados con la administración del capital humano de la empresa. Esta solución no solo mejorará la seguridad y la integridad de la información, sino que también facilitará la toma de decisiones operativas a partir de datos fiables y estructurados
+Administrador
+Vendedor
+Usuario/Cliente 
 
+3.Funciones necesarias
 
+Registrar usuarios nuevos en el sistema.
+Validación del rol del usuario, ya sea cliente o vendedor.
+Gestion básica de usuarios.
+Gestión de cartas publicadas en el sistema.
+Contacto entre cliente/vendedor.
 
-Lista de usuarios del sistema:
--Jefe de empresa
--Jefe Programadores
--Programadores
--jefe de diseñadores
--Diseñadores
--Guardias
--Gerencia
--Desarrolladores
--Juniors
--conserjes
-
-
-Tipos de usuarios y perfiles
-(roles) con permisos por rol (mínimo: Administrador, Usuario/Cliente,Vendedor).
--Jefe de empresa (administrador general)
--Jefe Programadores (Admin tecnico)
--Programadores (Usuario tecnico)
--Diseñadores (empleado estandar)
--Guardias (empleado estandar)
--Gerencia (empleado estandar)
--Desarrolladores (Admin tecnico)
--Juniors (Soporte basico)
--conserjes (empleado estandar)
+4.Datos a guardar
 
 
+Usuarios: Nombre, rol, permisos, hash de contraseña
+Clientes: ID, nombre, RUT/identificación, contacto, historial de compras, método de pago
+Tipo de Carta: Juego (e.g., Pokémon, Yu-Gi-Oh), valor estimado, calidad (grading), autentificación/estado de verificación
+Vendedor: ID, nombre, RUT/identificación, contacto, historial de ventas, estado de suscripción
 
-Funciones indispensables por perfil (lista priorizada).
+5.Reglas de negocio
 
-1. Jefe de empresa (Administrador general)
-Alta prioridad:
-Crear, editar y eliminar usuarios.
-Asignar roles y permisos a todos los empleados.
-Visualizar todos los datos y reportes de asistencia y productividad.
-Aprobar salarios y revisar horas trabajadas.
-Media prioridad:
-Generar reportes avanzados (para futuras versiones).
-Supervisar auditorías de cambios en el sistema.
-
-2. Jefe de programadores / Desarrolladores (Administrador técnico)
-
-Alta prioridad:
-Gestionar programadores y desarrolladores asignados.
-Asignar y actualizar tareas técnicas.
-Ver progreso de proyectos y tareas.
-Media prioridad:
-Generar reportes técnicos y métricas de productividad.
-
-3. Programadores y Diseñadores (Empleado estándar / Usuario técnico)
-
-Alta prioridad:
-Registrar tareas completadas.
-Actualizar estado de proyectos.
-Media prioridad:
-Consultar reportes básicos de sus propias tareas.
-Recibir notificaciones de asignaciones (futuro).
-
-4. Guardias y Conserjes (Empleado estándar)
-Alta prioridad:
-Registrar entrada y salida de empleados.
-Validar accesos a las instalaciones.
-Media prioridad:
-Generar alertas de accesos no autorizados (futuro).
-
-5. Gerencia (Empleado estándar)
-
-Alta prioridad:
-Ver reportes de asistencia y horas trabajadas.
-Supervisar horarios y productividad del personal.
-Media prioridad:
-Generar reportes estadísticos avanzados (futuro).
-
-6. Juniors (Soporte básico)
-Alta prioridad:
-Apoyar en el registro de datos de empleados.
-Actualizar información básica bajo supervisión.
-Media prioridad:
-Consultar tareas asignadas y estado de proyectos
+El vendedor sólo podrá estar a la visibilidad de todos si paga una suscripción semanal.
+Los clientes solo pueden publicar y comprar 2 cartas a la semana.
+Las cartas tienen que ser verificadas para poder publicarse.
+Si el cliente reserva y no paga en 1 día se anulará la reserva.
+Los trueques tienen que tener un acuerdo mútuo para realizarse.
+Las subastas tienen que estar supervisadas por algún administrador antes de realizarse.
 
 
 
+6.Prioridades
 
-Datos básicos a almacenar (entidades y atributos).
+Alta: Gestión usuarios, validar cartas, procesar pagos
+Media: Reservas
+Baja:  Trueques,subastas
 
-Jefe de empresa: ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+7.Flujos principales
 
-Jefe de programadores:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+Creación usuario -> obtener rol -> publicar/comprar carta -> contactar al vendedor -> procesar pago -> carta adquirida/vendida
 
-Programadores:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+8. Requisitos no funcionales
 
-Diseñadores: ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+-Seguridad en la gestión de usuarios y contraseñas (hash, login seguro).
+-Interfaz simple y responsiva.
+-Escalabilidad para múltiples subastas simultáneas.
+-Disponibilidad 24/7.
+-Historial de pujas y subastas consultable.
 
-Guardias:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+9.Plazo 
 
-Gerencia:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+Primera versión funcional el seis de noviembre con base de datos lista y apartado visual.
 
-Desarrolladores:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+10.Presupuesto
 
-Juniors:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+Creación base de datos, sitio web, creacion de usuarios y perfiles, publicación de cartas
+el presupuesto si eres cliente comprador es totalmente gratis, para los vendedores de cartas es una suma de $3.000 pesos chilenos $3,30 US semanales.
 
-conserjes:
-ID,Nombre,RUT,Cargo,Area,fecha_ingreso,Dirección,Sueldo,Telefono,Correo,Estado
+11. Propuesta Formal y Cronograma de Trabajo
+Propuesta Formal: Proponemos el desarrollo de una plataforma web (con potencial para una futura aplicación móvil) para la comunidad de coleccionistas. La clave de esta propuesta radica en la seguridad transaccional y la validación de la autenticidad de las cartas, diferenciándonos de plataformas de venta general. El enfoque es crear un mercado vertical y especializado.
 
+Cronograma de Alto Nivel:
 
-Lista de Requisitos funcionales y No funcionales
-.Obtenga datos de manera rapida y eficiente, administre a los empleados, genere un soporte de datos, que verifique que empleado no asistió quien no cumplió con las horas estimadas, que pase lista de los empleados, que tengan permisos diferentes de acuerdo al rol que tienen, actualize los datos automaticamente.
+Fase I: MVP Hasta 6 de Noviembre  Módulos de Prioridad Alta y Media: Base de datos, seguridad (Login/Registro), Gestión de Usuarios, Publicación y Validación de Cartas, Procesamiento de Pagos.
+ Fase II: Expansión Post 6 de Noviembre Módulos de Prioridad Baja: Implementación y optimización de Trueques y Subastas. 
+Fase III: Estabilización Continua Pruebas de carga, mejoras de experiencia de usuario y optimización de rendimiento. 
 
+12. Criterios de Aceptación y Ganancia
+Criterios de Aceptación (Medibles y Verificables):
 
+El flujo completo de registro de usuario y validación de rol debe ejecutarse correctamente en el 100% de las pruebas.
 
+La interfaz debe ser completamente responsiva y funcional en Chrome, Firefox y Safari.
 
-Definición del
-MVP
-(qué incluye / qué queda para futuras versiones).
+El sistema debe soportar un mínimo de 100 usuarios concurrentes sin degradación de rendimiento.
 
-El MVP de nuestro sistema consiste en una plataforma básica para registrar y gestionar empleados, controlar sus horarios de entrada y salida, asignar roles y permisos según su perfil, y garantizar la seguridad de los datos. Esta versión permite que la empresa lleve un control efectivo del personal y sus accesos, evitando modificaciones no autorizadas y facilitando la gestión de salarios.
-futuras versiones: reportes avanzados, nómina automática, auditoría de cambios, notificaciones, estadísticas de productividad y mejoras en la interfaz.
+Ganancia / Valor de Negocio:
+
+Valor para la Comunidad: Establecer la plataforma como el mercado digital de confianza para coleccionistas, eliminando el riesgo de fraude.
+
+Ganancia Financiera: Generación de un ingreso predecible y recurrente a través del modelo de suscripción semanal para los vendedores, asegurando la sostenibilidad del proyecto.
+
+13. Soporte y Mantenimiento
+Nuestro compromiso con la plataforma es de desarrollo y monitoreo constante. El soporte y mantenimiento se basará en:
+
+Monitoreo: Implementación de administradores para asegurar la disponibilidad y detectar errores de rendimiento o problemas de seguridad de forma proactiva.
+
+Mantenimiento correctivo: Equipo dedicado a la resolución de bugs y problemas reportados por la comunidad.
+
+Mantenimiento evolutivo: La plataforma se mantendrá en constante evolución, incorporando nuevas funcionalidades y adaptándose a las necesidades cambiantes del mercado coleccionista.
+
+Actualizaciones de Seguridad: Aplicación periódica de parches y auditorías de seguridad para proteger la integridad de los datos de los usuarios y las transacciones financieras.
+
+14. Próximos Pasos
+Una vez lanzada la versión inicial, el enfoque se desplazará hacia la optimización y expansión:
+
+Estabilización y Mantenimiento Correctivo: El foco inicial estará en resolver cualquier bug o problema de rendimiento detectado en las primeras semanas de uso real.
+
+Mejoras visuales y experiencia de usuario: Se realizarán mejoras más detalladas en la interfaz (UI) para crear una experiencia más fluida e intuitiva, basándose en la retroalimentación de los usuarios.
+
+Evaluación de futuras funcionalidades: Se comenzará a planificar el desarrollo de funcionalidades avanzadas como:
+
+Una aplicación móvil nativa (iOS/Android) para la gestión y compra/venta en movimiento.
+
+Integración de un motor de búsqueda avanzado con filtros por edición, rareza y valoración profesional de cartas.
+
 
 
