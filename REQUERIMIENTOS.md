@@ -80,7 +80,6 @@ Fase I: MVP Hasta 6 de Noviembre  Módulos de Prioridad Alta y Media: Base de da
 Fase III: Estabilización Continua Pruebas de carga, mejoras de experiencia de usuario y optimización de rendimiento. 
 
 12. Criterios de Aceptación y Ganancia
-Criterios de Aceptación (Medibles y Verificables):
 
 El flujo completo de registro de usuario y validación de rol debe ejecutarse correctamente en el 100% de las pruebas.
 
@@ -114,7 +113,7 @@ Mejoras visuales y experiencia de usuario: Se realizarán mejoras más detallada
 
 Evaluación de futuras funcionalidades: Se comenzará a planificar el desarrollo de funcionalidades avanzadas como:
 
-Una aplicación móvil nativa (iOS/Android) para la gestión y compra/venta en movimiento.
+Una aplicación móvil nativa para la gestión y compra/venta en movimiento.
 
 Integración de un motor de búsqueda avanzado con filtros por edición, rareza y valoración profesional de cartas.
 
