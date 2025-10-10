@@ -9,13 +9,17 @@ Durante las reuniones iniciales, el cliente manifestó que el principal problema
 En los espacios actuales, las transacciones suelen realizarse de manera informal, lo que genera múltiples dificultades, entre ellas:
 
 -Dificultad para verificar la autenticidad y el estado de los artículos.
+
 -Falta de un historial o trazabilidad de los intercambios.
+
 -Desconfianza entre compradores y vendedores.
 
 Ante esta situación, el cliente solicitó el desarrollo de un sistema web especializado que permita a los coleccionistas:
 
 -Crear un perfil personal con información básica y su inventario de cartas.
+
 -Publicar cartas disponibles para la venta o intercambio.
+
 -Participar en subastas y trueques de manera controlada.
 
 Acceder a un sistema de validación y reputación que garantice la seguridad de las operaciones.
@@ -29,28 +33,39 @@ El sistema contará con cuatro tipos principales de usuarios, cada uno con disti
 Administrador
 
 -Supervisa y gestiona la plataforma en su totalidad.
+
 -Valida la autenticidad de las cartas publicadas.
+
 -Monitorea transacciones, subastas y trueques para garantizar seguridad.
+
 -Gestiona cuentas de usuarios y resuelve conflictos o reportes.
 
 Vendedor
 
 -Publica cartas disponibles para la venta o intercambio.
+
 -Administra su inventario y actualiza información de las cartas.
+
 -Participa en subastas y trueques con otros usuarios.
+
 -Recibe retroalimentación y calificaciones de los clientes.
 
 Usuario
 
 -Registra un perfil en la plataforma para interactuar con la comunidad.
+
 -Participa en intercambios, subastas o foros de discusión sobre cartas.
+
 -Puede agregar cartas a su colección personal, sin realizar compras.
 
 Cliente
 
 -Accede a la plataforma con el objetivo de adquirir cartas (compra o intercambio).
+
 -Puede participar en subastas o trueques supervisados.
+
 -Valora y califica las transacciones realizadas con los vendedores.
+
 -Mantiene un historial de compras y colecciones adquiridas.
 
 
