@@ -8,6 +8,7 @@ El cliente corresponde a un grupo de emprendedores dedicados al coleccionismo e 
 Durante las reuniones iniciales, el cliente manifestó que el principal problema radica en la falta de una plataforma unificada y segura que centralice todas las actividades relacionadas con la compra, venta y validación de cartas.
 En los espacios actuales, las transacciones suelen realizarse de manera informal, lo que genera múltiples dificultades, entre ellas:
 
+-Riesgo de fraudes o falsificaciones de cartas.
 -Dificultad para verificar la autenticidad y el estado de los artículos.
 -Falta de un historial o trazabilidad de los intercambios.
 -Desconfianza entre compradores y vendedores.
@@ -17,6 +18,7 @@ Ante esta situación, el cliente solicitó el desarrollo de un sistema web espec
 -Crear un perfil personal con información básica y su inventario de cartas.
 -Publicar cartas disponibles para la venta o intercambio.
 -Participar en subastas y trueques de manera controlada.
+-Acceder a un sistema de validación y reputación que garantice la seguridad de las operaciones.
 
 Acceder a un sistema de validación y reputación que garantice la seguridad de las operaciones.
 
