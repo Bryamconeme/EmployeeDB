@@ -3,19 +3,56 @@ REQUERIMIENTOS.md
 
 1. Descripción del cliente y problema principal
 
-Las comunidades coleccionadoras de cartas abarcan un gran espacio en el mercado (Pokémon, Mitos y Leyendas, Yu-Gi-Oh, etc.). El desafío actual es la falta de una plataforma centralizada y segura que valide las transacciones y la autenticidad de las cartas.
+El cliente corresponde a un grupo de emprendedores dedicados al coleccionismo e intercambio de cartas de distintos juegos reconocidos a nivel mundial, tales como Pokémon, Mitos y Leyendas y Yu-Gi-Oh!. Actualmente, este grupo administra diversas comunidades en redes sociales y foros, donde los usuarios publican sus cartas para vender, intercambiar o subastar.
 
-Nuestra idea reúne a todo coleccionista, ya sea por hobby o comercio, en un sistema especializado. La plataforma permitirá a los usuarios crear un perfil y, según su rol, podrán:
-Publicar cartas duplicadas o en venta.
-Intercambiar cartas para completar colecciones.
-Participar en subastas o trueques supervisados.
-El objetivo es crear un mercado seguro que mejore la situación económica de los vendedores y complete los espacios vacíos en las colecciones de los clientes.
+Durante las reuniones iniciales, el cliente manifestó que el principal problema radica en la falta de una plataforma unificada y segura que centralice todas las actividades relacionadas con la compra, venta y validación de cartas.
+En los espacios actuales, las transacciones suelen realizarse de manera informal, lo que genera múltiples dificultades, entre ellas:
+
+-Dificultad para verificar la autenticidad y el estado de los artículos.
+-Falta de un historial o trazabilidad de los intercambios.
+-Desconfianza entre compradores y vendedores.
+
+Ante esta situación, el cliente solicitó el desarrollo de un sistema web especializado que permita a los coleccionistas:
+
+-Crear un perfil personal con información básica y su inventario de cartas.
+-Publicar cartas disponibles para la venta o intercambio.
+-Participar en subastas y trueques de manera controlada.
+
+Acceder a un sistema de validación y reputación que garantice la seguridad de las operaciones.
+
+El objetivo principal del cliente es consolidar una comunidad digital confiable donde los usuarios puedan realizar transacciones de manera transparente, eficiente y segura, fortaleciendo el mercado del coleccionismo y mejorando la experiencia general de los participantes.
 
 2. Lista de usuarios del sistema
 
+El sistema contará con cuatro tipos principales de usuarios, cada uno con distintos permisos y responsabilidades:
+
 Administrador
+
+-Supervisa y gestiona la plataforma en su totalidad.
+-Valida la autenticidad de las cartas publicadas.
+-Monitorea transacciones, subastas y trueques para garantizar seguridad.
+-Gestiona cuentas de usuarios y resuelve conflictos o reportes.
+
 Vendedor
-Usuario/Cliente 
+
+-Publica cartas disponibles para la venta o intercambio.
+-Administra su inventario y actualiza información de las cartas.
+-Participa en subastas y trueques con otros usuarios.
+-Recibe retroalimentación y calificaciones de los clientes.
+
+Usuario
+
+-Registra un perfil en la plataforma para interactuar con la comunidad.
+-Participa en intercambios, subastas o foros de discusión sobre cartas.
+-Puede agregar cartas a su colección personal, sin realizar compras.
+
+Cliente
+
+-Accede a la plataforma con el objetivo de adquirir cartas (compra o intercambio).
+-Puede participar en subastas o trueques supervisados.
+-Valora y califica las transacciones realizadas con los vendedores.
+-Mantiene un historial de compras y colecciones adquiridas.
+
 
 3.Funciones necesarias
 
