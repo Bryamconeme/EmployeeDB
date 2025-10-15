@@ -9,7 +9,7 @@ En los espacios actuales, las transacciones suelen realizarse de manera informal
 -Riesgo de fraudes o falsificaciones de cartas.
 -Dificultad para verificar la autenticidad y el estado de los artículos.
 -Falta de un historial o trazabilidad de los intercambios.
--Desconfinacia entre trabajadores
+-Desconfinacia entre Compradores y vendedores.
 
 Ante esta situación, el cliente solicitó el desarrollo de un sistema web especializado que permita a los coleccionistas:
 
