@@ -1,8 +1,7 @@
-# REQUERIMIENTOS DEL SISTEMA DE INTERCAMBIO Y VENTA DE CARTAS COLECCIONABLES
+# REQUERIMIENTOS DEL PROYECTO DE INTERCAMBIO Y VENTA DE CARTAS COLECCIONABLES
 
 Versión: 1.1  
-Fecha: 14 de octubre de 2025  
-Autores: Equipo de desarrollo – Proyecto Cartas Coleccionables
+Autores: Carlos Sepúlveda, Bryam Beltrán
 
 ---
 
@@ -68,10 +67,10 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 | RF-02  | El vendedor podrá publicar cartas con nombre, tipo de juego, condición, imagen y precio.                           | Alta      |
 | RF-03  | El administrador debe revisar y aprobar las publicaciones antes de que sean visibles.                              | Alta      |
 | RF-04  | Los clientes podrán realizar compras y reservas de cartas disponibles.                                             | Alta      |
-| RF-07  | El sistema debe registrar un historial de transacciones por usuario.                                               | Alta      |
-| RF-08  | El administrador podrá suspender cuentas o publicaciones que incumplan normas.                                     | Alta      |
-| RF-09  | El vendedor podrá actualizar o eliminar sus publicaciones.                                                         | Media     |
-| RF-10  | El cliente podrá dejar reseñas y calificaciones después de una compra.                                             | Baja      |
+| RF-05  | El sistema debe registrar un historial de transacciones por usuario.                                               | Alta      |
+| RF-06  | El administrador podrá suspender cuentas o publicaciones que incumplan normas.                                     | Alta      |
+| RF-07  | El vendedor podrá actualizar o eliminar sus publicaciones.                                                         | Media     |
+| RF-08  | El cliente podrá dejar reseñas y calificaciones después de una compra.                                             | Baja      |
 
 ---
 
@@ -80,10 +79,10 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 | Código | Categoría      | Requerimiento                                                                   | Prioridad |
 | ------ | -------------- | ------------------------------------------------------------------------------- | --------- |
 | RNF-01 | Seguridad      | Las contraseñas deben almacenarse cifradas y la comunicación usar HTTPS.        | Alta      |
-| RNF-03 | Rendimiento    | El tiempo de respuesta máximo debe ser inferior a 2 segundos por solicitud.     | Media     |
-| RNF-04 | Disponibilidad | El sistema debe mantener un 99 % de disponibilidad mensual.                     | Alta      |
-| RNF-05 | Escalabilidad  | La aplicación debe permitir la incorporación futura de más juegos y categorías. | Media     |
-| RNF-06 | Mantenibilidad | El código debe estar documentado y seguir buenas prácticas de desarrollo.       | Media     |
+| RNF-02 | Rendimiento    | El tiempo de respuesta máximo debe ser inferior a 2 segundos por solicitud.     | Media     |
+| RNF-03 | Disponibilidad | El sistema debe mantener un 99 % de disponibilidad mensual.                     | Alta      |
+| RNF-04 | Escalabilidad  | La aplicación debe permitir la incorporación futura de más juegos y categorías. | Media     |
+| RNF-05 | Mantenibilidad | El código debe estar documentado y seguir buenas prácticas de desarrollo.       | Media     |
 
 ---
 
