@@ -68,8 +68,6 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 | RF-02  | El vendedor podrá publicar cartas con nombre, tipo de juego, condición, imagen y precio.                           | Alta      |
 | RF-03  | El administrador debe revisar y aprobar las publicaciones antes de que sean visibles.                              | Alta      |
 | RF-04  | Los clientes podrán realizar compras y reservas de cartas disponibles.                                             | Alta      |
-| RF-05  | El sistema debe enviar notificaciones automáticas (publicación aprobada, venta confirmada, pago recibido, etc.).   | Media     |
-| RF-06  | Los usuarios podrán comunicarse mediante mensajes internos.                                                        | Media     |
 | RF-07  | El sistema debe registrar un historial de transacciones por usuario.                                               | Alta      |
 | RF-08  | El administrador podrá suspender cuentas o publicaciones que incumplan normas.                                     | Alta      |
 | RF-09  | El vendedor podrá actualizar o eliminar sus publicaciones.                                                         | Media     |
@@ -82,7 +80,6 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 | Código | Categoría      | Requerimiento                                                                   | Prioridad |
 | ------ | -------------- | ------------------------------------------------------------------------------- | --------- |
 | RNF-01 | Seguridad      | Las contraseñas deben almacenarse cifradas y la comunicación usar HTTPS.        | Alta      |
-| RNF-02 | Usabilidad     | La interfaz debe ser responsiva y accesible desde PC, tablet o smartphone.      | Alta      |
 | RNF-03 | Rendimiento    | El tiempo de respuesta máximo debe ser inferior a 2 segundos por solicitud.     | Media     |
 | RNF-04 | Disponibilidad | El sistema debe mantener un 99 % de disponibilidad mensual.                     | Alta      |
 | RNF-05 | Escalabilidad  | La aplicación debe permitir la incorporación futura de más juegos y categorías. | Media     |
@@ -175,17 +172,6 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 * Servidor: Localhost en desarrollo; Azure/AWS en producción
 * Control de versiones: Git y GitHub
 * Arquitectura: Cliente–Servidor con API REST
-
----
-
-## 11. Cronograma de Desarrollo
-
-| Fase                           | Actividades                                                  | Duración estimada |
-| ------------------------------ | ------------------------------------------------------------ | ---------------- |
-| Fase 1 – MVP                   | Registro, login, publicación de cartas, validación por admin | 4 semanas        |
-| Fase 2 – Intercambio y reseñas | Módulo de intercambio, mensajería, calificaciones            | 3 semanas        |
-| Fase 3 – Optimización          | Seguridad, auditorías, pruebas de carga, documentación       | 2 semanas        |
-| Fase 4 – Mantenimiento         | Corrección de errores, mejoras, soporte                      | Continua         |
 
 ---
 
