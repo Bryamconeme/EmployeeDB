@@ -1,7 +1,7 @@
 # REQUERIMIENTOS DEL SISTEMA DE INTERCAMBIO Y VENTA DE CARTAS COLECCIONABLES
 
-Versión: 1.1
-Fecha: 14 de octubre de 2025
+Versión: 1.1  
+Fecha: 14 de octubre de 2025  
 Autores: Equipo de desarrollo – Proyecto Cartas Coleccionables
 
 ---
@@ -31,28 +31,24 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 ## 2. Lista de Usuarios del Sistema
 
 * **Administrador**
-
   * Supervisa la plataforma y valida autenticidad de cartas.
   * Permisos: Crear, editar y eliminar usuarios y publicaciones; aprobar ventas.
 
 * **Vendedor**
-
   * Publica cartas y gestiona sus ventas o intercambios.
   * Permisos: Registrar productos, modificar precios, consultar ventas.
 
 * **Cliente**
-
   * Navega, compra e intercambia cartas.
   * Permisos: Buscar cartas, realizar compras o intercambios, dejar reseñas.
 
 * **Usuario**
-
   * Rol genérico que permite el acceso inicial al sistema y funcionalidades básicas.
   * Permisos: Registrarse, completar perfil y consultar catálogo de cartas.
 
 ---
 
-## 3. Alcance del Proyecto
+## 3. Funciones necesarias
 
 **Incluye:**
 
@@ -60,13 +56,7 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 * Publicación y gestión de cartas.
 * Compra, venta e intercambio de cartas.
 * Validación de autenticidad por el administrador.
-* Notificaciones de estado de publicación y transacción
-
-**No incluye:**
-
-* Envío físico de cartas (solo gestión en línea).
-* Integración con pasarelas de pago reales (simulación).
-* Aplicación móvil nativa (solo versión web responsiva).
+* Notificaciones de estado de publicación y transacción.
 
 ---
 
@@ -100,7 +90,7 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 
 ---
 
-## 6. Datos a Guardar (versión mejorada)
+## 6. Datos a Guardar
 
 ### Usuarios
 
@@ -149,9 +139,17 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 
 ---
 
-## 8. Flujos Principales
+## 8. Prioridades
 
-### 8.1 Flujo de Publicación de Carta
+* **Alta:** Gestión de usuarios, validación de cartas, procesamiento de pagos  
+* **Media:** Reservas  
+* **Baja:** Trueques, subastas
+
+---
+
+## 9. Flujos Principales
+
+### 9.1 Flujo de Publicación de Carta
 
 1. El vendedor inicia sesión.
 2. Publica una carta con sus detalles.
@@ -159,7 +157,7 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 4. Si la aprueba → la carta se muestra en el catálogo.
 5. Si la rechaza → se notifica al vendedor con el motivo.
 
-### 8.2 Flujo de Compra
+### 9.2 Flujo de Compra
 
 1. El cliente selecciona una carta disponible.
 2. Realiza la compra o reserva.
@@ -168,26 +166,122 @@ El objetivo principal del cliente es consolidar una comunidad digital confiable 
 
 ---
 
-## 9. Requerimientos Técnicos (ajustados al MVP)
+## 10. Requerimientos Técnicos
 
 * Lenguaje backend: Node.js (para MongoDB + Redis + JWT)
-* Base de datos: MongoDB (cumple MVP)
+* Base de datos: MongoDB
 * Cache: Redis para mejorar rendimiento
 * Frontend: React.js o Vue.js (interfaz responsiva)
 * Servidor: Localhost en desarrollo; Azure/AWS en producción
 * Control de versiones: Git y GitHub
 * Arquitectura: Cliente–Servidor con API REST
 
-> ⚠️ SQL Server se omite para cumplir exactamente con el MVP.
+---
+
+## 11. Cronograma de Desarrollo
+
+| Fase                           | Actividades                                                  | Duración estimada |
+| ------------------------------ | ------------------------------------------------------------ | ---------------- |
+| Fase 1 – MVP                   | Registro, login, publicación de cartas, validación por admin | 4 semanas        |
+| Fase 2 – Intercambio y reseñas | Módulo de intercambio, mensajería, calificaciones            | 3 semanas        |
+| Fase 3 – Optimización          | Seguridad, auditorías, pruebas de carga, documentación       | 2 semanas        |
+| Fase 4 – Mantenimiento         | Corrección de errores, mejoras, soporte                      | Continua         |
 
 ---
 
-## 10. Cronograma de Desarrollo
+## 12. Presupuesto Estimado
 
-| Fase                           | Actividades                                                  | Duración estimada |
-| ------------------------------ | ------------------------------------------------------------ | ----------------- |
-| Fase 1 – MVP                   | Registro, login, publicación de cartas, validación por admin | 4 semanas         |
-| Fase 2 – Intercambio y reseñas | Módulo de intercambio, mensajería, calificaciones            | 3 semanas         |
-| Fase 3 – Optimización          | Seguridad, auditorías, pruebas de carga, documentación       | 2 semanas         |
-| Fase 4 – Mantenimiento         | Corrección de errores, mejoras, soporte                      | Continua          |
+**1. Desarrollo del MVP (4–6 semanas)**
+
+| Concepto                            | Detalle                                                        | Costo aproximado |
+| ---------------------------------- | -------------------------------------------------------------- | --------------- |
+| Backend + API                       | Node.js + MongoDB + Redis + JWT                                 | $1.500.000 CLP (~US$1.650) |
+| Frontend                             | React.js/Vue.js responsivo                                     | $1.200.000 CLP (~US$1.320) |
+| Integración y pruebas               | Testing, correcciones y validaciones                            | $500.000 CLP (~US$550) |
+| Documentación y GitHub               | README, requisitos, diseño y flujo de desarrollo               | $200.000 CLP (~US$220) |
+
+**Subtotal Desarrollo MVP:** $3.400.000 CLP (~US$3.740)
+
+---
+
+**2. Infraestructura (mensual)**
+
+| Concepto                  | Detalle                                           | Costo mensual aproximado |
+| ------------------------- | ------------------------------------------------- | ----------------------- |
+| Hosting / Servidor Cloud   | Azure/AWS (1 instancia para API + DB)            | $100.000 CLP (~US$110) |
+| Base de datos (MongoDB)    | Servicio gestionado o VPS                         | $50.000 CLP (~US$55) |
+| Redis (cache)              | Servicio gestionado o VPS                         | $20.000 CLP (~US$22) |
+| Dominio y certificados SSL | Dominio .cl y certificado SSL                     | $15.000 CLP (~US$16.5) |
+
+**Subtotal Infraestructura mensual:** $185.000 CLP (~US$203.5)
+
+---
+
+**3. Suscripción y monetización**
+
+* Cliente/usuario: gratis  
+* Vendedor: $3.000 CLP / semana (~US$3.3 / semana, ~$12.000 CLP / mes ~US$13.2 / mes)  
+
+---
+
+**4. Mantenimiento y Soporte (mensual)**
+
+| Concepto                  | Detalle                                | Costo mensual aproximado |
+| ------------------------- | -------------------------------------- | ----------------------- |
+| Monitoreo y soporte       | Resolución de bugs, uptime y seguridad | $150.000 CLP (~US$165) |
+| Actualizaciones y mejoras | Funcionalidades y optimización         | $100.000 CLP (~US$110) |
+
+**Subtotal Mantenimiento:** $250.000 CLP (~US$275)
+
+---
+
+**5. Total estimado primer mes:**  
+Desarrollo MVP + infraestructura + mantenimiento inicial: ~$3.400.000 + $185.000 + $250.000 ≈ **$3.835.000 CLP (~US$4.218.5)**
+
+> Este presupuesto incluye desarrollo, infraestructura y mantenimiento básico, considerando la monetización vía suscripción semanal de vendedores.
+
+---
+
+## 13. Propuesta Formal y Cronograma de Trabajo
+
+Proponemos el desarrollo de una plataforma web (con potencial para futura aplicación móvil) para la comunidad de coleccionistas. La clave de esta propuesta radica en la seguridad transaccional y la validación de la autenticidad de las cartas, diferenciándonos de plataformas de venta general. El enfoque es crear un mercado vertical y especializado.
+
+**Cronograma de Alto Nivel:**
+
+* Fase I: MVP Hasta 6 de Noviembre – Módulos de Prioridad Alta y Media: Base de datos, seguridad (Login/Registro), Gestión de Usuarios, Publicación y Validación de Cartas, Procesamiento de Pagos.
+* Fase II: Expansión Post 6 de Noviembre – Módulos de Prioridad Baja: Implementación y optimización de Trueques y Subastas.
+* Fase III: Estabilización Continua – Pruebas de carga, mejoras de experiencia de usuario y optimización de rendimiento.
+
+---
+
+## 14. Criterios de Aceptación y Ganancia
+
+* El flujo completo de registro de usuario y validación de rol debe ejecutarse correctamente en el 100% de las pruebas.
+* La interfaz debe ser completamente responsiva y funcional en Chrome, Firefox y Safari.
+* El sistema debe soportar un mínimo de 100 usuarios concurrentes sin degradación de rendimiento.
+
+**Valor para la Comunidad:** Establecer la plataforma como el mercado digital de confianza para coleccionistas, eliminando el riesgo de fraude.  
+**Ganancia Financiera:** Generación de un ingreso predecible y recurrente a través del modelo de suscripción semanal para los vendedores.
+
+---
+
+## 15. Soporte y Mantenimiento
+
+* **Monitoreo:** Implementación de administradores para asegurar la disponibilidad y detectar errores de rendimiento o problemas de seguridad de forma proactiva.
+* **Mantenimiento correctivo:** Equipo dedicado a la resolución de bugs y problemas reportados.
+* **Mantenimiento evolutivo:** La plataforma se mantendrá en constante evolución, incorporando nuevas funcionalidades y adaptándose a las necesidades cambiantes del mercado coleccionista.
+* **Actualizaciones de Seguridad:** Aplicación periódica de parches y auditorías de seguridad para proteger la integridad de los datos de los usuarios y las transacciones financieras.
+
+---
+
+## 16. Próximos Pasos
+
+* Estabilización y Mantenimiento Correctivo: resolver bugs y problemas de rendimiento detectados en las primeras semanas de uso real.
+* Mejoras visuales y experiencia de usuario: optimización de UI/UX basada en retroalimentación de usuarios.
+* Evaluación de futuras funcionalidades:
+  * Aplicación móvil nativa para gestión y compra/venta en movimiento.
+  * Integración de motor de búsqueda avanzado con filtros por edición, rareza y valoración profesional de cartas.
+
+
+
 
