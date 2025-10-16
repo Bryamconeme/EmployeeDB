@@ -1,121 +1,269 @@
-REQUERIMIENTOS.md
+# REQUERIMIENTOS DEL PROYECTO DE INTERCAMBIO Y VENTA DE CARTAS COLECCIONABLES
 
-1. Descripción del cliente y problema principal
+Versión: 1.1  
+Autores: Carlos Sepúlveda, Bryam Beltrán
 
-Las comunidades coleccionadoras de cartas abarcan un gran espacio en el mercado (Pokémon, Mitos y Leyendas, Yu-Gi-Oh, etc.). El desafío actual es la falta de una plataforma centralizada y segura que valide las transacciones y la autenticidad de las cartas.
+---
 
-Nuestra idea reúne a todo coleccionista, ya sea por hobby o comercio, en un sistema especializado. La plataforma permitirá a los usuarios crear un perfil y, según su rol, podrán:
-Publicar cartas duplicadas o en venta.
-Intercambiar cartas para completar colecciones.
-Participar en subastas o trueques supervisados.
-El objetivo es crear un mercado seguro que mejore la situación económica de los vendedores y complete los espacios vacíos en las colecciones de los clientes.
+## 1. Descripción del Cliente y Problema Principal
 
-2. Lista de usuarios del sistema
+El cliente corresponde a un grupo de emprendedores dedicados al coleccionismo e intercambio de cartas de distintos juegos reconocidos a nivel mundial, tales como Pokémon, Mitos y Leyendas y Yu-Gi-Oh!. Actualmente, este grupo administra diversas comunidades en redes sociales y foros, donde los usuarios publican sus cartas para vender, intercambiar o subastar.
 
-Administrador
-Vendedor
-Usuario/Cliente 
+Durante las reuniones iniciales, el cliente manifestó que el principal problema radica en la falta de una plataforma unificada y segura que centralice todas las actividades relacionadas con la compra, venta y validación de cartas. En los espacios actuales, las transacciones suelen realizarse de manera informal, lo que genera múltiples dificultades, entre ellas:
 
-3.Funciones necesarias
+* Riesgo de fraudes o falsificaciones de cartas.
+* Dificultad para verificar la autenticidad y el estado de los artículos.
+* Falta de un historial o trazabilidad de los intercambios.
+* Desconfianza entre compradores y vendedores.
 
-Registrar usuarios nuevos en el sistema.
-Validación del rol del usuario, ya sea cliente o vendedor.
-Gestion básica de usuarios.
-Gestión de cartas publicadas en el sistema.
-Contacto entre cliente/vendedor.
+Ante esta situación, el cliente solicitó el desarrollo de un sistema web especializado que permita a los coleccionistas:
 
-4.Datos a guardar
+* Crear un perfil personal con información básica y su inventario de cartas.
+* Publicar cartas disponibles para la venta o intercambio.
+* Participar en subastas y trueques de manera controlada.
+* Acceder a un sistema de validación y reputación que garantice la seguridad de las operaciones.
 
+El objetivo principal del cliente es consolidar una comunidad digital confiable donde los usuarios puedan realizar transacciones de manera transparente, eficiente y segura, fortaleciendo el mercado del coleccionismo y mejorando la experiencia general de los participantes.
 
-Usuarios: Nombre, rol, permisos, hash de contraseña
-Clientes: ID, nombre, RUT/identificación, contacto, historial de compras, método de pago
-Tipo de Carta: Juego (e.g., Pokémon, Yu-Gi-Oh), valor estimado, calidad (grading), autentificación/estado de verificación
-Vendedor: ID, nombre, RUT/identificación, contacto, historial de ventas, estado de suscripción
+---
 
-5.Reglas de negocio
+## 2. Lista de Usuarios del Sistema
 
-El vendedor sólo podrá estar a la visibilidad de todos si paga una suscripción semanal.
-Los clientes solo pueden publicar y comprar 2 cartas a la semana.
-Las cartas tienen que ser verificadas para poder publicarse.
-Si el cliente reserva y no paga en 1 día se anulará la reserva.
-Los trueques tienen que tener un acuerdo mútuo para realizarse.
-Las subastas tienen que estar supervisadas por algún administrador antes de realizarse.
+* **Administrador**
+  * Supervisa la plataforma y valida autenticidad de cartas.
+  * Permisos: Crear, editar y eliminar usuarios y publicaciones; aprobar ventas.
 
+* **Vendedor**
+  * Publica cartas y gestiona sus ventas o intercambios.
+  * Permisos: Registrar productos, modificar precios, consultar ventas.
 
+* **Cliente**
+  * Navega, compra e intercambia cartas.
+  * Permisos: Buscar cartas, realizar compras o intercambios, dejar reseñas.
 
-6.Prioridades
+* **Usuario**
+  * Rol genérico que permite el acceso inicial al sistema y funcionalidades básicas.
+  * Permisos: Registrarse, completar perfil y consultar catálogo de cartas.
 
-Alta: Gestión usuarios, validar cartas, procesar pagos
-Media: Reservas
-Baja:  Trueques,subastas
+---
 
-7.Flujos principales
+## 3. Funciones necesarias
 
-Creación usuario -> obtener rol -> publicar/comprar carta -> contactar al vendedor -> procesar pago -> carta adquirida/vendida
+**Incluye:**
 
-8. Requisitos no funcionales
+* Registro y autenticación de usuarios.
+* Publicación y gestión de cartas.
+* Compra, venta e intercambio de cartas.
+* Validación de autenticidad por el administrador.
+* Notificaciones de estado de publicación y transacción.
 
--Seguridad en la gestión de usuarios y contraseñas (hash, login seguro).
--Interfaz simple y responsiva.
--Escalabilidad para múltiples subastas simultáneas.
--Disponibilidad 24/7.
--Historial de pujas y subastas consultable.
+---
 
-9.Plazo 
+## 4. Requerimientos Funcionales (RF)
 
-Primera versión funcional el seis de noviembre con base de datos lista y apartado visual.
+| Código | Requerimiento                                                                                                      | Prioridad |
+| ------ | ------------------------------------------------------------------------------------------------------------------ | --------- |
+| RF-01  | El sistema debe permitir el registro de nuevos usuarios con validación de rol (cliente, vendedor o administrador). | Alta      |
+| RF-02  | El vendedor podrá publicar cartas con nombre, tipo de juego, condición, imagen y precio.                           | Alta      |
+| RF-03  | El administrador debe revisar y aprobar las publicaciones antes de que sean visibles.                              | Alta      |
+| RF-04  | Los clientes podrán realizar compras y reservas de cartas disponibles.                                             | Alta      |
+| RF-05  | El sistema debe registrar un historial de transacciones por usuario.                                               | Alta      |
+| RF-06  | El administrador podrá suspender cuentas o publicaciones que incumplan normas.                                     | Alta      |
+| RF-07  | El vendedor podrá actualizar o eliminar sus publicaciones.                                                         | Media     |
+| RF-08  | El cliente podrá dejar reseñas y calificaciones después de una compra.                                             | Baja      |
 
-10.Presupuesto
+---
 
-Creación base de datos, sitio web, creacion de usuarios y perfiles, publicación de cartas
-el presupuesto si eres cliente comprador es totalmente gratis, para los vendedores de cartas es una suma de $3.000 pesos chilenos $3,30 US semanales.
+## 5. Requerimientos No Funcionales (RNF)
 
-11. Propuesta Formal y Cronograma de Trabajo
-Propuesta Formal: Proponemos el desarrollo de una plataforma web (con potencial para una futura aplicación móvil) para la comunidad de coleccionistas. La clave de esta propuesta radica en la seguridad transaccional y la validación de la autenticidad de las cartas, diferenciándonos de plataformas de venta general. El enfoque es crear un mercado vertical y especializado.
+| Código | Categoría      | Requerimiento                                                                   | Prioridad |
+| ------ | -------------- | ------------------------------------------------------------------------------- | --------- |
+| RNF-01 | Seguridad      | Las contraseñas deben almacenarse cifradas y la comunicación usar HTTPS.        | Alta      |
+| RNF-02 | Rendimiento    | El tiempo de respuesta máximo debe ser inferior a 2 segundos por solicitud.     | Media     |
+| RNF-03 | Disponibilidad | El sistema debe mantener un 99 % de disponibilidad mensual.                     | Alta      |
+| RNF-04 | Escalabilidad  | La aplicación debe permitir la incorporación futura de más juegos y categorías. | Media     |
+| RNF-05 | Mantenibilidad | El código debe estar documentado y seguir buenas prácticas de desarrollo.       | Media     |
 
-Cronograma de Alto Nivel:
+---
 
-Fase I: MVP Hasta 6 de Noviembre  Módulos de Prioridad Alta y Media: Base de datos, seguridad (Login/Registro), Gestión de Usuarios, Publicación y Validación de Cartas, Procesamiento de Pagos.
- Fase II: Expansión Post 6 de Noviembre Módulos de Prioridad Baja: Implementación y optimización de Trueques y Subastas. 
-Fase III: Estabilización Continua Pruebas de carga, mejoras de experiencia de usuario y optimización de rendimiento. 
+## 6. Datos a Guardar
 
-12. Criterios de Aceptación y Ganancia
+### Usuarios
 
-El flujo completo de registro de usuario y validación de rol debe ejecutarse correctamente en el 100% de las pruebas.
+* Nombre
+* Rol (Administrador, Vendedor, Cliente, Usuario)
+* Permisos
+* Hash de contraseña
 
-La interfaz debe ser completamente responsiva y funcional en Chrome, Firefox y Safari.
+### Clientes
 
-El sistema debe soportar un mínimo de 100 usuarios concurrentes sin degradación de rendimiento.
+* ID
+* Nombre
+* RUT/Identificación
+* Contacto
+* Historial de compras
+* Método de pago
 
-Ganancia / Valor de Negocio:
+### Vendedores
 
-Valor para la Comunidad: Establecer la plataforma como el mercado digital de confianza para coleccionistas, eliminando el riesgo de fraude.
+* ID
+* Nombre
+* RUT/Identificación
+* Contacto
+* Historial de ventas
+* Estado de suscripción
 
-Ganancia Financiera: Generación de un ingreso predecible y recurrente a través del modelo de suscripción semanal para los vendedores, asegurando la sostenibilidad del proyecto.
+### Tipo de Carta
 
-13. Soporte y Mantenimiento
-Nuestro compromiso con la plataforma es de desarrollo y monitoreo constante. El soporte y mantenimiento se basará en:
+* Juego (e.g., Pokémon, Yu-Gi-Oh)
+* Valor estimado
+* Calidad (grading)
+* Autentificación / Estado de verificación
 
-Monitoreo: Implementación de administradores para asegurar la disponibilidad y detectar errores de rendimiento o problemas de seguridad de forma proactiva.
+---
 
-Mantenimiento correctivo: Equipo dedicado a la resolución de bugs y problemas reportados por la comunidad.
+## 7. Reglas de Negocio
 
-Mantenimiento evolutivo: La plataforma se mantendrá en constante evolución, incorporando nuevas funcionalidades y adaptándose a las necesidades cambiantes del mercado coleccionista.
+* El vendedor sólo podrá estar visible al público si paga una suscripción semanal.
+* Los clientes solo pueden publicar y comprar 2 cartas a la semana.
+* Las cartas deben ser verificadas por un administrador antes de publicarse.
+* Si un cliente reserva y no paga en 1 día, se anulará la reserva.
+* Los trueques deben ser aceptados por ambas partes.
+* Las subastas deben ser supervisadas por un administrador.
+* Toda publicación rechazada debe indicar el motivo.
+* El sistema registrará cada cambio de estado (auditoría básica).
 
-Actualizaciones de Seguridad: Aplicación periódica de parches y auditorías de seguridad para proteger la integridad de los datos de los usuarios y las transacciones financieras.
+---
 
-14. Próximos Pasos
-Una vez lanzada la versión inicial, el enfoque se desplazará hacia la optimización y expansión:
+## 8. Prioridades
 
-Estabilización y Mantenimiento Correctivo: El foco inicial estará en resolver cualquier bug o problema de rendimiento detectado en las primeras semanas de uso real.
+* **Alta:** Gestión de usuarios, validación de cartas, procesamiento de pagos  
+* **Media:** Reservas  
+* **Baja:** Trueques, subastas
 
-Mejoras visuales y experiencia de usuario: Se realizarán mejoras más detalladas en la interfaz (UI) para crear una experiencia más fluida e intuitiva, basándose en la retroalimentación de los usuarios.
+---
 
-Evaluación de futuras funcionalidades: Se comenzará a planificar el desarrollo de funcionalidades avanzadas como:
+## 9. Flujos Principales
 
-Una aplicación móvil nativa para la gestión y compra/venta en movimiento.
+### 9.1 Flujo de Publicación de Carta
 
-Integración de un motor de búsqueda avanzado con filtros por edición, rareza y valoración profesional de cartas.
+1. El vendedor inicia sesión.
+2. Publica una carta con sus detalles.
+3. El administrador revisa la publicación.
+4. Si la aprueba → la carta se muestra en el catálogo.
+5. Si la rechaza → se notifica al vendedor con el motivo.
 
+### 9.2 Flujo de Compra
 
+1. El cliente selecciona una carta disponible.
+2. Realiza la compra o reserva.
+3. Se notifica al vendedor y al administrador.
+4. Se actualiza el inventario y el historial del usuario.
+
+---
+
+## 10. Requerimientos Técnicos
+
+* Lenguaje backend: Node.js (para MongoDB + Redis + JWT)
+* Base de datos: MongoDB
+* Cache: Redis para mejorar rendimiento
+* Frontend: React.js o Vue.js (interfaz responsiva)
+* Servidor: Localhost en desarrollo; Azure/AWS en producción
+* Control de versiones: Git y GitHub
+* Arquitectura: Cliente–Servidor con API REST
+
+---
+
+## 12. Presupuesto Estimado
+
+**1. Desarrollo del MVP (4–6 semanas)**
+
+| Concepto                            | Detalle                                                        | Costo aproximado |
+| ---------------------------------- | -------------------------------------------------------------- | --------------- |
+| Backend + API                       | Node.js + MongoDB + Redis + JWT                                 | $1.500.000 CLP (~US$1.650) |
+| Frontend                             | React.js/Vue.js responsivo                                     | $1.200.000 CLP (~US$1.320) |
+| Integración y pruebas               | Testing, correcciones y validaciones                            | $500.000 CLP (~US$550) |
+| Documentación y GitHub               | README, requisitos, diseño y flujo de desarrollo               | $200.000 CLP (~US$220) |
+
+**Subtotal Desarrollo MVP:** $3.400.000 CLP (~US$3.740)
+
+---
+
+**2. Infraestructura (mensual)**
+
+| Concepto                  | Detalle                                           | Costo mensual aproximado |
+| ------------------------- | ------------------------------------------------- | ----------------------- |
+| Hosting / Servidor Cloud   | Azure/AWS (1 instancia para API + DB)            | $100.000 CLP (~US$110) |
+| Base de datos (MongoDB)    | Servicio gestionado o VPS                         | $50.000 CLP (~US$55) |
+| Redis (cache)              | Servicio gestionado o VPS                         | $20.000 CLP (~US$22) |
+| Dominio y certificados SSL | Dominio .cl y certificado SSL                     | $15.000 CLP (~US$16.5) |
+
+**Subtotal Infraestructura mensual:** $185.000 CLP (~US$203.5)
+
+---
+
+**3. Suscripción y monetización**
+
+* Cliente/usuario: gratis  
+* Vendedor: $3.000 CLP / semana (~US$3.3 / semana, ~$12.000 CLP / mes ~US$13.2 / mes)  
+
+---
+
+**4. Mantenimiento y Soporte (mensual)**
+
+| Concepto                  | Detalle                                | Costo mensual aproximado |
+| ------------------------- | -------------------------------------- | ----------------------- |
+| Monitoreo y soporte       | Resolución de bugs, uptime y seguridad | $150.000 CLP (~US$165) |
+| Actualizaciones y mejoras | Funcionalidades y optimización         | $100.000 CLP (~US$110) |
+
+**Subtotal Mantenimiento:** $250.000 CLP (~US$275)
+
+---
+
+**5. Total estimado primer mes:**  
+Desarrollo MVP + infraestructura + mantenimiento inicial: ~$3.400.000 + $185.000 + $250.000 ≈ **$3.835.000 CLP (~US$4.218.5)**
+
+> Este presupuesto incluye desarrollo, infraestructura y mantenimiento básico, considerando la monetización vía suscripción semanal de vendedores.
+
+---
+
+## 13. Propuesta Formal y Cronograma de Trabajo
+
+Proponemos el desarrollo de una plataforma web (con potencial para futura aplicación móvil) para la comunidad de coleccionistas. La clave de esta propuesta radica en la seguridad transaccional y la validación de la autenticidad de las cartas, diferenciándonos de plataformas de venta general. El enfoque es crear un mercado vertical y especializado.
+
+**Cronograma de Alto Nivel:**
+
+* Fase I: MVP Hasta 6 de Noviembre – Módulos de Prioridad Alta y Media: Base de datos, seguridad (Login/Registro), Gestión de Usuarios, Publicación y Validación de Cartas, Procesamiento de Pagos.
+* Fase II: Expansión Post 6 de Noviembre – Módulos de Prioridad Baja: Implementación y optimización de Trueques y Subastas.
+* Fase III: Estabilización Continua – Pruebas de carga, mejoras de experiencia de usuario y optimización de rendimiento.
+
+---
+
+## 14. Criterios de Aceptación y Ganancia
+
+* El flujo completo de registro de usuario y validación de rol debe ejecutarse correctamente en el 100% de las pruebas.
+* La interfaz debe ser completamente responsiva y funcional en Chrome, Firefox y Safari.
+* El sistema debe soportar un mínimo de 100 usuarios concurrentes sin degradación de rendimiento.
+
+**Valor para la Comunidad:** Establecer la plataforma como el mercado digital de confianza para coleccionistas, eliminando el riesgo de fraude.  
+**Ganancia Financiera:** Generación de un ingreso predecible y recurrente a través del modelo de suscripción semanal para los vendedores.
+
+---
+
+## 15. Soporte y Mantenimiento
+
+* **Monitoreo:** Implementación de administradores para asegurar la disponibilidad y detectar errores de rendimiento o problemas de seguridad de forma proactiva.
+* **Mantenimiento correctivo:** Equipo dedicado a la resolución de bugs y problemas reportados.
+* **Mantenimiento evolutivo:** La plataforma se mantendrá en constante evolución, incorporando nuevas funcionalidades y adaptándose a las necesidades cambiantes del mercado coleccionista.
+* **Actualizaciones de Seguridad:** Aplicación periódica de parches y auditorías de seguridad para proteger la integridad de los datos de los usuarios y las transacciones financieras.
+
+---
+
+## 16. Próximos Pasos
+
+* Estabilización y Mantenimiento Correctivo: resolver bugs y problemas de rendimiento detectados en las primeras semanas de uso real.
+* Mejoras visuales y experiencia de usuario: optimización de UI/UX basada en retroalimentación de usuarios.
+* Evaluación de futuras funcionalidades:
+  * Aplicación móvil nativa para gestión y compra/venta en movimiento.
+  * Integración de motor de búsqueda avanzado con filtros por edición, rareza y valoración profesional de cartas.
 
