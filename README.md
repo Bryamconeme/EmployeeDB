@@ -1,4 +1,4 @@
-# 🃏 Proyecto: Plataforma de Intercambio y Venta de Cartas Coleccionables
+# Proyecto: Plataforma de Intercambio y Venta de Cartas Coleccionables
 
 **Versión:** 1.1  
 **Autores:** Carlos Sepúlveda, Bryam Beltrán  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Descripción General
+##  Descripción General
 
 Este proyecto busca desarrollar una **plataforma web especializada** para la compra, venta, intercambio y subasta de cartas coleccionables de juegos reconocidos como **Pokémon**, **Yu-Gi-Oh!** y **Mitos y Leyendas**.
 
@@ -14,7 +14,7 @@ El objetivo principal es **centralizar las transacciones de los coleccionistas**
 
 ---
 
-## 🧩 Problema a Resolver
+## Problema a Resolver
 
 Actualmente, las comunidades de coleccionistas operan mediante redes sociales y foros, lo que genera problemas como:
 
@@ -27,7 +27,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 🎯 Objetivos del Proyecto
+##  Objetivos del Proyecto
 
 - Desarrollar un **sistema web seguro y escalable** para coleccionistas.  
 - Implementar un **sistema de validación de autenticidad** de cartas.  
@@ -36,7 +36,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 👥 Roles de Usuario
+## Roles de Usuario
 
 | Rol | Descripción | Permisos principales |
 |-----|--------------|----------------------|
@@ -47,7 +47,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## ⚙️ Funcionalidades Principales
+## Funcionalidades Principales
 
 - Registro y autenticación de usuarios con roles.  
 - Publicación y gestión de cartas.  
@@ -58,7 +58,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 🧱 Arquitectura Técnica
+##  Arquitectura Técnica
 
 **Backend:** Node.js + Express + JWT + Redis  
 **Base de datos:** MongoDB  
@@ -71,7 +71,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 🔐 Requerimientos No Funcionales (RNF)
+## Requerimientos No Funcionales (RNF)
 
 - Seguridad: Contraseñas cifradas y HTTPS obligatorio.  
 - Disponibilidad: ≥ 99 % mensual.  
@@ -81,7 +81,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 🧮 Presupuesto Estimado
+##  Presupuesto Estimado
 
 **Desarrollo MVP:** $3.400.000 CLP (~US$3.740)  
 **Infraestructura mensual:** $185.000 CLP (~US$203)  
@@ -94,7 +94,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 🗓️ Cronograma General
+## Cronograma General
 
 | Fase | Periodo | Entregables |
 |------|----------|-------------|
@@ -104,7 +104,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## ✅ Criterios de Aceptación
+##  Criterios de Aceptación
 
 - Registro y autenticación 100% funcional.  
 - Interfaz responsiva en Chrome, Firefox y Safari.  
@@ -112,7 +112,7 @@ Este sistema propone una **plataforma unificada** con validación, reputación y
 
 ---
 
-## 🛠️ Instrucciones de Ejecución (modo desarrollo)
+## Instrucciones de Ejecución (modo desarrollo)
 
 ```bash
 # Clonar el repositorio
